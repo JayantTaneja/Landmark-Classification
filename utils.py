@@ -2,8 +2,6 @@ import streamlit as st
 from  PIL import Image
 import torch
 import torchvision.transforms as T
-from src.predictor import predictor_test
-
 import numpy as np
 
 
