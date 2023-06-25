@@ -6,10 +6,12 @@ from src.predictor import predictor_test
 
 import numpy as np
 
+
 def load_model():
     if "model" not in st.session_state:
-        model_reloaded = torch.jit.load("checkpoints/transfer_exported3.pt")
-        st.session_state.model = model_reloaded
+        with st.spinner("Loading Model"):
+            model_reloaded = torch.jit.load("checkpoints/transfer_exported3.pt")
+            st.session_state.model = model_reloaded
 
         
 def show_image(uploaded_file):
