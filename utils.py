@@ -4,7 +4,6 @@ import torch
 import torchvision.transforms as T
 import numpy as np
 
-
 def load_model():
     if "model" not in st.session_state:
         with st.spinner("Loading Model"):
